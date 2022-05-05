@@ -1,45 +1,23 @@
+import { Routes, Route, Outlet} from "react-router-dom";
+
+import Navigation from "./routes/navigation/navigation.component";
+import HomePage from "./routes/home/home.component";
+import Authenticating from "./routes/authenticating/authenticating.component";
+import Shop from "./routes/shop/shop.component";
+import Checkout from "./routes/checkout/checkout.component";
 
 
 const App = () => {
-  return (
-      <div className='categories-container'>
-          <div className="category-container">
-              { /* <img src="" alt=""/> */}
-              <div className="category-body-container">
-                  <h2>Hats</h2>
-                  <p>Shop Now</p>
-              </div>
-          </div>
-          <div className="category-container">
-              { /* <img src="" alt=""/> */}
-              <div className="category-body-container">
-                  <h2>Jackets</h2>
-                  <p>Shop Now</p>
-              </div>
-          </div>
-          <div className="category-container">
-              { /* <img src="" alt=""/> */}
-              <div className="category-body-container">
-                  <h2>Sneakers</h2>
-                  <p>Shop Now</p>
-              </div>
-          </div>
-          <div className="category-container">
-              { /* <img src="" alt=""/> */}
-              <div className="category-body-container">
-                  <h2>Womens</h2>
-                  <p>Shop Now</p>
-              </div>
-          </div>
-          <div className="category-container">
-              { /* <img src="" alt=""/> */}
-              <div className="category-body-container">
-                  <h2>Mens</h2>
-                  <p>Shop Now</p>
-              </div>
-          </div>
-      </div>
-  );
-}
+    return (
+        <Routes>
+            <Route path={'/'} element={<Navigation />}>
+                <Route index element={<HomePage />} />
+                <Route path={'shop/*'} element={<Shop />} />
+                <Route path={'auth'} element={<Authenticating />} />
+                <Route path={'checkout'} element={<Checkout />} />
+            </Route>
+        </Routes>
+    );
+};
 
 export default App;
