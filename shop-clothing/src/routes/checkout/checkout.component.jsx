@@ -7,7 +7,7 @@ import {CheckoutContainer, CheckoutHeader, HeaderBlock, Total} from './checkout.
 
 const Checkout = () => {
 
-    const {cartItems, totalPrice } = useContext(CartContext);
+    const {cartItems, cartTotal } = useContext(CartContext);
 
     return (
         <CheckoutContainer>
@@ -23,7 +23,7 @@ const Checkout = () => {
                     <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
                 );
             })}
-            <Total>Total: $ {totalPrice}</Total>
+            <Total>Total: ${cartTotal}</Total>
         </CheckoutContainer>
     );
 };
