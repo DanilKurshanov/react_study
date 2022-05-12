@@ -7,14 +7,14 @@ import Category from "../category/category.component";
 
 import {ProductContainer} from './shop.styles';
 import {getCategoriesAndDocuments} from "../../utils/firebase/firebase.utils";
-import {fetchCategoriesAsync, setCategories} from "../../store/categories/category.action"
+import {fetchCategoriesAsync, fetchCategoriesStart, setCategories} from "../../store/categories/category.action"
 
 const Shop = () => {
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-            dispatch(fetchCategoriesAsync());
+            dispatch(fetchCategoriesStart());
     }, [dispatch]);
 
     return (
