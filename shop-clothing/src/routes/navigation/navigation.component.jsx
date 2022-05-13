@@ -5,7 +5,7 @@ import {useSelector, useDispatch} from "react-redux";
 import CartIcon from "../../components/card-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import {ReactComponent as CrwnLogo} from "../../assets/086 crown.svg";
+import {ReactComponent as CrwnLogo} from "../../assets/crown.svg";
 
 
 // import {CartContext} from "../../contexts/cart.context";
