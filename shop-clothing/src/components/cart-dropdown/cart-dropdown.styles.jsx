@@ -9,7 +9,7 @@ import {
 export const CartDropdownContainer = styled.div`
   position: absolute;
   width: 300px;
-  height: 440px;
+  height: 340px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -28,27 +28,12 @@ export const CartDropdownContainer = styled.div`
 
 export const EmptyMessage = styled.span`
   font-size: 18px;
-  margin: 50px auto;
+  margin: 50px auto
 `
 
 export const CartItems = styled.div`
   height: 240px;
   display: flex;
   flex-direction: column;
-  //overflow: scroll;
+  overflow: scroll;
 `
-// .cart-dropdown-container {
-
-//
-//   .empty-message {
-
-//   }
-//
-//   .cart-items {
-
-//   }
-//
-//   button {
-//     margin-top: auto;
-//   }
-// }
